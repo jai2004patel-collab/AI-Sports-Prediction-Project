@@ -14,7 +14,6 @@ st.title("🏀 NBA AI Prop Predictor")
 st.subheader("Strict CSV-powered Over/Under model for Knicks vs Spurs props")
 st.caption("This stricter version only highlights truly confident prop edges.")
 
-@st.cache_data
 def load_data():
     df = pd.read_csv(CSV_FILE, encoding="latin1")
     df["Line"] = pd.to_numeric(df["Line"], errors="coerce")
